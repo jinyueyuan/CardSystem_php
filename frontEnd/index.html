@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>arbor.js project template</title>
+<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
+</head>
+<body>
+<table id="example2" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>createtime</th>
+                <th>cardid</th>
+                <th>flag</th>
+            </tr>
+    </table>
+  
+
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+ 
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			wenzhianalyze();
+			/*var newuserinfo = [{
+				  "phone": "15221530965",
+			      "workplace": "上海市 市辖区 杨浦区",
+			      "occupation": "学生",
+			      "job": "IT/互联网 研发",
+			      "influence": 10,
+			      "organization": "上海交通大学",
+			      "university": "上海交通大学",
+			      "qq": "593880978",
+			      "wechat": "gavin",
+			      "weibo": "15221530965",
+			      "include": {"id": 1514000098566}
+			}];
+			$.ajax({
+			       type: "POST",
+			       url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/Userinfo",
+			       dataType:"json",
+			       contentType:"application/json",
+			       data: newuserinfo,
+			       success: function(data) {
+			         if(data!=null){
+			        	//alert(data['User'][0]['password']);
+			        	//alert(data['User'][0]['name']);
+			        	
+			        	alert("chenggong");
+			        	 //alert("注册成功");
+			         }
+			         else 
+			        	 alert("登录失败！");
+			       },
+			       error:function(){
+			    	   alert("ajax失败");
+			       }
+			     });*/
+			
+			/*var myMap = new Map();
+			myMap.set(0, "zero");
+			myMap.set(1, "one");
+			for (var [key, value] of myMap) {
+			  console.log(key + " = " + value);
+			}
+			// 将会显示两个log。一个是"0 = zero"另一个是"1 = one"
+
+			for (var key of myMap.keys()) {
+			  console.log(key);
+			}
+			// 将会显示两个log。 一个是 "0" 另一个是 "1"
+
+			for (var value of myMap.values()) {
+			  console.log(value);
+			}
+			// 将会显示两个log。 一个是 "zero" 另一个是 "one"
+
+			for (var [key, value] of myMap.entries()) {
+			  console.log(key + " = " + value);
+			}
+			var userMap =  new Map();
+			var suggestMap = new Map();
+			userMap.set("aaa",0);
+			userMap.set("bbb",0); 
+			for(var key of userMap){
+				alert("属性：" + key + ",值："+ userMap[key]);
+			}*/
+			  
+			// 将会显示两个log。 一个是 "0 = zero" 另一个是 "1 = one"
+			//var aa = null;
+			/*$.ajax({
+			       type: "GET",
+			       url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/Usertest",
+			       dataType:"json",
+			     //  data: {name:$("#username").val()},
+			       success: function(data) {
+			         if(data!=null){
+			        	// gettable(data)
+			        	alert(data['Usertest']);
+			         }
+			         else 
+			        	 alert("登录失败！");
+			       },
+			       error:function(){
+			    	   alert("ajax失败");
+			       }
+			     });*/
+			/*$('#example2').DataTable( {
+				  ajax: {
+			            url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/Usertest",
+			            type: 'GET',
+			            dataSrc:"Usertest"   
+			        },
+			        "columns": [
+						//{ "data": "id" },
+			            { "data": "name" },
+			            { "data": "email" },
+			            { "data": "createtime" },
+			            { "data": "cardid" },
+			            { "data": "flag" }
+			        ]
+		    } );*/
+		   
+		} );
+		/*function gettable(aa){
+			 $('#example2').DataTable( {
+		    	  "ajax": aa,
+		        "columns": [
+		            { "Usertest": "id" },
+		            { "Usertest": "name" },
+		            { "Usertest": "password" },
+		            { "Usertest": "email" },
+		            { "Usertest": "createtime" },
+		            { "Usertest": "cardid" },
+		            { "Usertest": "flag" }
+		        ]
+		    } );
+		}	*/
+		function wenzhianalyze(){
+			//https://wenzhi.api.qcloud.com/v2/index.php?Action=TextKeywords
+			/*公共参数Action:TextKeywords,SecretId,Timestamp:当前时间戳，Nonce：随机正整数
+			业务参数：title：新闻标题,channel:新闻频道（可选）,content:新闻正文
+			返回码：code:0为成功，其他为失败，message:错误信息，keywords：关键词提取的结果，其中Array元素包含以下字段
+			score Double 关键词权重；keyword	 String 关键词提取服务对文本标记的标签；type String keyword（文本中出现的关键词） topic（话题）
+			*/
+			$.ajax({
+				type: "GET",
+			       url: "../backEnd/keywordsAnalyse.php?name=jinyueyuan",
+			       dataType:"json",
+			       success: function(data) {
+				        alert(data);
+                       window.location.href="home.html";
+				       },
+				       error:function(){
+				    	   alert("ajax失败");
+				       }
+				})
+		}
+		</script>
+</body>
+</html>

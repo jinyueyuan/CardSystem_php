@@ -284,14 +284,52 @@
 		<!-- inline scripts related to this page -->
 
 		<script type="text/javascript">
-			function show_box(id) {
+          /* $.ajax({
+                type: "PUT",
+                url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/Userrelation/1514034611287",
+                dataType:"json",
+                contentType:"application/json",
+                data: JSON.stringify({adder:"wuyufei",addee:"chen",
+                    relation:"同事关系",createtime:1514034609733,flag:1}),
+                success: function(data) {
+                    if(data!=null){
+                        //alert(data['User'][0]['password']);
+                        //alert(data['User'][0]['name']);
+
+                        //window.location.href="home.html";
+                        alert("注册成功");
+                    }
+                    else
+                        alert("登录失败！");
+                },
+                error:function(){
+                    alert("ajax失败");
+                }
+            });*/
+          /*$.ajax({
+				       type: "DELETE",
+				       url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/Userrelation/1514207951063",
+				       dataType:"json",
+				       success: function(data) {
+				         if(data!=null){
+
+				        	 alert("添加成功");
+				         }
+				         else
+				        	 alert("添加失败！");
+				       },
+				       error:function(){
+				    	   alert("ajax失败");
+				       }
+				     });*/
+            function show_box(id) {
 			 jQuery('.widget-box.visible').removeClass('visible');
 			 jQuery('#'+id).addClass('visible');
 			}
 			function userLogin() {
 			     $.ajax({
 			       type: "GET",
-			       url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/Usertest?Usertest.name="+$("#username").val(),
+			       url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/User?User.name="+$("#username").val(),
 			       dataType:"json",
 			     //  data: {name:$("#username").val()},
 			       success: function(data) {
@@ -299,10 +337,18 @@
 			        	//alert(data['user'].username);
 			        	//alert(data['User'][0]['password']);
 			        	//alert(data['User'][0]['name']);
-			        	if($("#password").val()==data['Usertest'][0]['password']){
-			        		setCookie("username",data['Usertest'][0]['name'],1);
+			        	if($("#password").val()==data['User'][0]['password']){
+			        		setCookie("username",data['User'][0]['name'],1);
+			        		var authority = data['User'][0]['flag'];
+                            setCookie("authority",authority,1);
 				        	//alert(getCookie("username"));
-				        	window.location.href="home.html";
+							if(authority==1){
+                                window.location.href="home.html";
+							}
+							else if(authority==2){
+                                window.location.href="flowMonitor.html";
+							}
+
 			        	}
 			        	else
 			        		alert("密码错误");
@@ -323,7 +369,7 @@
 				    	//   email:$("#regemail").val(),createtime:currenttimestamp,cardid:"1",flag:1}));
 					$.ajax({
 					       type: "POST",
-					       url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/Usertest",
+					       url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/User",
 					       dataType:"json",
 					       contentType:"application/json",
 					       data: JSON.stringify({name:$("#regname").val(),password:$("#regpassword").val(),

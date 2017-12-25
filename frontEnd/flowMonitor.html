@@ -301,7 +301,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="javascript:void(0)" onclick="logout()">
 										<i class="icon-off"></i>
 										Logout
 									</a>
@@ -359,21 +359,21 @@
 					</div><!-- #sidebar-shortcuts -->
 
 					<ul class="nav nav-list">
-						<li>
+						<li class="user">
 							<a href="home.html">
 								<i class="icon-dashboard"></i>
 								<span class="menu-text"> 人脉分析 </span>
 							</a>
 						</li>
 
-						<li  class="active">
+						<li  class="manager active">
 							<a href="flowMonitor.html">
 								<i class="icon-text-width"></i>
 								<span class="menu-text"> 流量监控 </span>
 							</a>
 						</li>
 
-						<li>
+						<li class="manager">
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-desktop"></i>
 								<span class="menu-text"> 用户管理 </span>
@@ -397,206 +397,21 @@
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li class="user">
 							<a href="talkAnalyse.html" class="dropdown-toggle">
-								<i class="icon-desktop"></i>
+								<i class="icon-edit"></i>
 								<span class="menu-text"> 谈资分析 </span>
 							</a>
 						</li>
-						<li>
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-list"></i>
-								<span class="menu-text"> 表格 </span>
 
-								<b class="arrow icon-angle-down"></b>
-							</a>
 
-							<ul class="submenu">
-								<li>
-									<a href="tables.html">
-										<i class="icon-double-angle-right"></i>
-										简单 &amp; 动态
-									</a>
-								</li>
-
-								<li>
-									<a href="jqgrid.html">
-										<i class="icon-double-angle-right"></i>
-										jqGrid plugin
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-edit"></i>
-								<span class="menu-text"> 表单 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="form-elements.html">
-										<i class="icon-double-angle-right"></i>
-										表单组件
-									</a>
-								</li>
-
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										向导提示 &amp; 验证
-									</a>
-								</li>
-
-								<li>
-									<a href="wysiwyg.html">
-										<i class="icon-double-angle-right"></i>
-										编辑器
-									</a>
-								</li>
-
-								<li>
-									<a href="dropzone.html">
-										<i class="icon-double-angle-right"></i>
-										文件上传
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="widgets.html">
-								<i class="icon-list-alt"></i>
-								<span class="menu-text"> 插件 </span>
-							</a>
-						</li>
-
-						<li>
-							<a href="calendar.html">
-								<i class="icon-calendar"></i>
-
-								<span class="menu-text">
-									日历
-									<span class="badge badge-transparent tooltip-error" title="2&nbsp;Important&nbsp;Events">
-										<i class="icon-warning-sign red bigger-130"></i>
-									</span>
-								</span>
-							</a>
-						</li>
-
-						<li>
+						<li class="user">
 							<a href="gallery.html">
 								<i class="icon-picture"></i>
 								<span class="menu-text"> 相册 </span>
 							</a>
 						</li>
 
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-tag"></i>
-								<span class="menu-text"> 更多页面 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="profile.html">
-										<i class="icon-double-angle-right"></i>
-										用户信息
-									</a>
-								</li>
-
-								<li>
-									<a href="inbox.html">
-										<i class="icon-double-angle-right"></i>
-										收件箱
-									</a>
-								</li>
-
-								<li>
-									<a href="pricing.html">
-										<i class="icon-double-angle-right"></i>
-										售价单
-									</a>
-								</li>
-
-								<li>
-									<a href="invoice.html">
-										<i class="icon-double-angle-right"></i>
-										购物车
-									</a>
-								</li>
-
-								<li>
-									<a href="timeline.html">
-										<i class="icon-double-angle-right"></i>
-										时间轴
-									</a>
-								</li>
-
-								<li>
-									<a href="login.html">
-										<i class="icon-double-angle-right"></i>
-										登录 &amp; 注册
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-file-alt"></i>
-
-								<span class="menu-text">
-									其他页面
-									<span class="badge badge-primary ">5</span>
-								</span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="faq.html">
-										<i class="icon-double-angle-right"></i>
-										帮助
-									</a>
-								</li>
-
-								<li>
-									<a href="error-404.html">
-										<i class="icon-double-angle-right"></i>
-										404错误页面
-									</a>
-								</li>
-
-								<li>
-									<a href="error-500.html">
-										<i class="icon-double-angle-right"></i>
-										500错误页面
-									</a>
-								</li>
-
-								<li>
-									<a href="grid.html">
-										<i class="icon-double-angle-right"></i>
-										网格
-									</a>
-								</li>
-
-								<li class="active">
-									<a href="blank.html">
-										<i class="icon-double-angle-right"></i>
-										空白页面
-									</a>
-								</li>
-							</ul>
-						</li>
 					</ul><!-- /.nav-list -->
 
 					<div class="sidebar-collapse" id="sidebar-collapse">
@@ -752,85 +567,96 @@
 				    username: getCookie("username")
 				  }
 				})
-			
+            function logout(){
+                delCookie('username');
+                window.location.href="login.html";
+            }
 			var MonthArray = ["January","February","March","April","May","June",
 			                  "July","August","September","October","November","December"]
 			$(document).ready(function(){
-				var currentday = new Date().getDate();
-				var currentmonth = new Date().getMonth();
-				var firstday = Number(new Date().setDate(1));
-				
-				//alert(new Date(firstday));
-				//alert(firstday);
-				$.ajax({
-					type:"GET",
-					 url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/Usertest?Usertest.createtime=(gte)"+firstday,
-				       dataType:"json",
-				       success: function(data) {
-				         if(data!=null){
-				        	 //数据库中的时间为时间戳格式，将数据按日期分组；存储成：date日期，number人数
-				        	 //dateObject.getDate()
-				        	 var myMap = new Map();
-							 var registerDate = new Array();
-				        	 for(var i = 1;i<=currentday;i++){
-					       		 myMap.set(i,0);
-					       		 registerDate.push(i);
-					       	 }
-				        	 var registerNumber = new Array();
-				        	 for(var i =0;i<data['Usertest'].length;i++){
-				        		 var day = new Date(data['Usertest'][i].createtime).getDate();
-				        		 //alert(day);
-				        		 var number = myMap.get(day);
-				        		 myMap.set(day,(number+1));
-				        	 }
-				        	 for(var i = 1;i<=currentday;i++){
-				        		 registerNumber.push(myMap.get(i));
-				        	 }
-				        	 chartline1(currentmonth,registerNumber,registerDate);
-				        	 //alert("成功获取流量");
-				         }
-				         else 
-				        	 alert("获取流量失败！");
-				       },
-				       error:function(){
-				    	   alert("ajax失败");
-				       }
-				})
-				$.ajax({
-					type:"GET",
-					 url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/Userrelation?Userrelation.createtime=(gte)"+firstday,
-				       dataType:"json",
-				       success: function(data) {
-				         if(data!=null){
-				        	 //数据库中的时间为时间戳格式，将数据按日期分组；存储成：date日期，number人数
-				        	 //dateObject.getDate()
-				        	 var myMap = new Map();
-							 var registerDate = new Array();
-				        	 for(var i = 1;i<=currentday;i++){
-					       		 myMap.set(i,0);
-					       		 registerDate.push(i);
-					       	 }
-				        	 var registerNumber = new Array();
-				        	 for(var i =0;i<data['Userrelation'].length;i++){
-				        		 var day = new Date(data['Userrelation'][i].createtime).getDate();
-				        		 //alert(day);
-				        		 var number = myMap.get(day);
-				        		 myMap.set(day,(number+1));
-				        	 }
-				        	 for(var i = 1;i<=currentday;i++){
-				        		 registerNumber.push(myMap.get(i));
-				        	 }
-				        	 chartline2(currentmonth,registerNumber,registerDate);
-				        	 //alert("成功获取流量");
-				         }
-				         else 
-				        	 alert("获取流量失败！");
-				       },
-				       error:function(){
-				    	   alert("ajax失败");
-				       }
-				})
-			});
+                var authority=getCookie("authority");
+                if(authority!=null) {
+                    if (authority == 1)
+                        $(".manager").remove();
+                    else if (authority == 2) {
+                        $(".user").remove();
+                    }
+                }
+                    var currentday = new Date().getDate();
+                    var currentmonth = new Date().getMonth();
+                    var firstday = Number(new Date().setDate(1));
+
+                    //alert(new Date(firstday));
+                    //alert(firstday);
+                    $.ajax({
+                        type: "GET",
+                        url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/User?User.createtime=(gte)" + firstday,
+                        dataType: "json",
+                        success: function (data) {
+                            if (data != null) {
+                                //数据库中的时间为时间戳格式，将数据按日期分组；存储成：date日期，number人数
+                                //dateObject.getDate()
+                                var myMap = new Map();
+                                var registerDate = new Array();
+                                for (var i = 1; i <= currentday; i++) {
+                                    myMap.set(i, 0);
+                                    registerDate.push(i);
+                                }
+                                var registerNumber = new Array();
+                                for (var i = 0; i < data['User'].length; i++) {
+                                    var day = new Date(data['User'][i].createtime).getDate();
+                                    //alert(day);
+                                    var number = myMap.get(day);
+                                    myMap.set(day, (number + 1));
+                                }
+                                for (var i = 1; i <= currentday; i++) {
+                                    registerNumber.push(myMap.get(i));
+                                }
+                                chartline1(currentmonth, registerNumber, registerDate);
+                                //alert("成功获取流量");
+                            }
+                            else
+                                alert("获取流量失败！");
+                        },
+                        error: function () {
+                            alert("ajax失败");
+                        }
+                    })
+                    $.ajax({
+                        type: "GET",
+                        url: "http://120.79.42.137:8080/Entity/Ud7adca934ab4e/Card/Userrelation?Userrelation.createtime=(gte)" + firstday,
+                        dataType: "json",
+                        success: function (data) {
+                            if (data != null) {
+                                //数据库中的时间为时间戳格式，将数据按日期分组；存储成：date日期，number人数
+                                //dateObject.getDate()
+                                var myMap = new Map();
+                                var registerDate = new Array();
+                                for (var i = 1; i <= currentday; i++) {
+                                    myMap.set(i, 0);
+                                    registerDate.push(i);
+                                }
+                                var registerNumber = new Array();
+                                for (var i = 0; i < data['Userrelation'].length; i++) {
+                                    var day = new Date(data['Userrelation'][i].createtime).getDate();
+                                    //alert(day);
+                                    var number = myMap.get(day);
+                                    myMap.set(day, (number + 1));
+                                }
+                                for (var i = 1; i <= currentday; i++) {
+                                    registerNumber.push(myMap.get(i));
+                                }
+                                chartline2(currentmonth, registerNumber, registerDate);
+                                //alert("成功获取流量");
+                            }
+                            else
+                                alert("获取流量失败！");
+                        },
+                        error: function () {
+                            alert("ajax失败");
+                        }
+                    })
+			})
 			function chartline1(currentmonth,registerNumber,registerDate){
 				var ctx = document.getElementById("registerChart").getContext("2d");
 				var myChart = new Chart(ctx, {
